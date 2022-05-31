@@ -4,5 +4,4 @@
 
 ### Anmerkungen
 
-- Aufgabe 1.3 wurde noch nicht richtig gelöst.
-- Aufgabe 2.10 fehlt.
+- Aufgabe 1.3 könnte nicht ganz richtig sein.
