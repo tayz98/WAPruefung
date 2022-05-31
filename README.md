@@ -3,5 +3,3 @@
 ## Autor: Alexander Nachtigal
 
 ### Anmerkungen
-
-- Aufgabe 1.3 könnte nicht ganz richtig sein.
