@@ -60,7 +60,7 @@
       mit der ID "experience" sind, und alle Elemente, die mit der Klasse "years"
       ausgezeichnet sind. */
 
-      #ul#experience, .years {
+      #experience p, .years {
         color: green;
       }
 
@@ -92,7 +92,9 @@
       }
 
       /* Aufgabe 2.10 - Selektiere alle Label-Elemente, die nicht leer sind. */ 
-      /* KEINE AHNUNG */
+      label:not(:empty) {
+        background-color: blue;
+      }
       
    </style>
 </body>
