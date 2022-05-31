@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aufgabe 2</title>
+</head>
+<body>
+  <section id="profile">
+    <h1>Bill Gates</h1>
+    <div class="highlight">Greater Seattle Area | Philanthropy</div>
+    <h2>Experience</h2>
+    <ul id="experience">
+    <li>
+    <p class="job highlight">Co-Chair, Bill & Melinda Gates Foundation</p>
+    <p class="years">2000-Present</p>
+    </li>
+    <li>
+    <p class="job highlight">Co-Founder & Chairman, Microsoft</p>
+    <p class="years">1975-2014</p>
+    </li>
+    </ul>
+    <h2>Education</h2>
+    <ul>
+    <li>
+    <p class="school highlight">Harvard University</p>
+    <div class="years">1973-1975</div>
+    </li>
+    <li>
+    <p class="school highlight">Lakeside School, Seattle</p>
+    </li>
+    </ul>
+    <h2>Contact Info</h2>
+    <label>E-Mail</label> <input type="email name=email value=bill.gates@microsoft" <label>Twitter</label> <input type="text name=twitter value=@BillGates">
+    <label>Blog</label> <input type="text name=blog value=https://gatesnotes.com">
+    <label></label>
+   </section>   
+   <style>
+     /* Aufgabe 2.1 - Selektiere alle Elemente, die mit der Klasse "school" ausgezeichnet sind. */
+     .school {
+       color: red;
+     }
+     /* Aufgabe 2.2 - Selektiere alle Paragraph-Elemente, die mit der Klasse "highlight" ausgezeichnet sind. */
+     p.highlight {
+       color:blue;
+     }
+     /* Aufgabe 2.3 - Selektiere das Section-Element mit der ID "profile". */
+     #profile {
+       color: bisque;
+     }
+
+     /* Aufgabe 2.4 - Selektiere alle direkten Kinder des Elements mit der ID "profile" */
+     #profile > * {
+       color:aqua;
+     }
+
+     /* Aufgabe 2.5 - 
+      Selektiere alle Paragraph-Elemente, die Nachfahren eines UnorderedList-Elements
+      mit der ID "experience" sind, und alle Elemente, die mit der Klasse "years"
+      ausgezeichnet sind. */
+
+      #ul#experience, .years {
+        color: green;
+      }
+
+      /* Aufgabe 2.6 - 
+        Selektiere alle ListItem-Elemente, 
+        die Nachfahren des letzten UnorderedList-Elements sind. */
+      ul:last-of-type li{
+        color: blueviolet;
+      }
+
+      /* Aufgabe 2.7 - 
+        Selektiere alle Input-Elemente, 
+        deren Attribut "type" den Wert "text" hat. */
+      input[type^=text] {
+        background-color: red;
+      }
+
+      /* Aufgabe 2.8 - 
+      Selektiere alle Input-Elemente, 
+      deren Attribut "value" den Wert "gates" enthält */
+      input[type*=gates] {
+        background-color: blueviolet;
+      }
+
+      /* Aufgabe 2.9 - 
+      Selektiere für alle H2-Elemente das jeweils nachfolgende Geschwisterelement */
+      h2 + * {
+        font-size: x-large;
+      }
+
+      /* Aufgabe 2.10 - Selektiere alle Label-Elemente, die nicht leer sind. */ 
+      /* KEINE AHNUNG */
+      
+   </style>
+</body>
+</html>
+

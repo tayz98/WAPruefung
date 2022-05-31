@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <menu>
+      <li>air water</li>
+      <li>fire earth</li>
+      <li>air earth</li>
+      <li>water fire void</li>
+    </menu>
+    <script>
+      const x = document.querySelectorAll("menu li");
+      x.forEach((element) => {
+        if (element.innerHTML.includes("fire")) {
+          element.remove();
+        } else {
+          return;
+        }
+      });
+    </script>
+  </body>
+</html>

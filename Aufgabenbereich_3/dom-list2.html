@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="list">
+      <b>1 10 2</b>
+      <section>1 -4 7</section>
+      <div>4 6 abc 8</div>
+      <p>7 5 3 1</p>
+    </div>
+
+    <script>
+      // bessere Lösung wäre: über eine foor Loop durch jedes ChildElement gehen.
+      const parent = document.getElementById(list);
+      let b = document.querySelector("#list b");
+      b.innerHTML = b.textContent
+        .split(" ")
+        .map(Number)
+        .reduce((a, b) => a + b);
+      const sec = document.querySelector("#list section");
+      sec.innerHTML = sec.textContent
+        .split(" ")
+        .map(Number)
+        .reduce((a, b) => a + b);
+      const di = document.querySelector("#list div");
+      di.innerHTML = di.textContent
+        .split("")
+        .map(Number)
+        .reduce((a, b) => a + b);
+      const p = document.querySelector("p");
+      p.innerHTML = p.textContent
+        .split("")
+        .map(Number)
+        .reduce((a, b) => a + b);
+    </script>
+  </body>
+</html>
