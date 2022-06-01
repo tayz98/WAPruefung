@@ -11,8 +11,8 @@ Eigenschaft auch vom Typ function und undefined sein. [X]
 ## Aufgabe 4.2 Mit welchem HTTP-Header teilt der Sender dem Empfänger mit, in welchem Format die Daten im HTTP-Request-Body codiert sind?
 
 - Accept []
-- Accept-Encoding [X]
-- Content-Type []
+- Accept-Encoding []
+- Content-Type [X]
 
 ## Aufgabe 4.3 Welche HTTP-Methode wird verwendet, um eine Ressource vollständig zu ersetzen?
 
