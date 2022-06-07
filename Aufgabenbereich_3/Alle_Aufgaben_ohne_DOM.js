@@ -7,10 +7,10 @@ function isDivider(a, b) {
   }
 }
 
-// Aufgabe 3.2
+// Aufgabe 3.2 -- Alternativ auch ohne Array in der Funktion
 function sumofDividers(a) {
-  let result = 0;
-  let newArr = [0];
+  let result = 0; 
+  let newArr = [0]; 
   for (let i = 1; i < a; i++) {
     newArr.push(i);
     if (a % newArr[i] == 0) {
@@ -52,9 +52,19 @@ const objects = [
   { city: "Flensburg", state: "SH", inhabitants: 89000 },
   { city: "Heide", state: "SH", inhabitants: 21000 },
 ];
+
+/*
 function inhabitantsOfState(objects, state) {
   const stateFilter = objects.filter((o) => o.state == state);
   return stateFilter;
+}*/
+
+
+function inhabitantsOfState(objects,state) {
+  return objects.filter(o => o.state==state) 
+    .map(o=> o.inhabitants)
+    .reduce((a,b) => (a+b))
+  
 }
 
 console.log(inhabitantsOfState(objects, "SH"));

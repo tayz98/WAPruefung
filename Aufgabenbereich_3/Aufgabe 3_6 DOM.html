@@ -19,9 +19,9 @@
       const parent = document.getElementById(list);
       let b = document.querySelector("#list b");
       b.innerHTML = b.textContent
-        .split(" ")
-        .map(Number)
-        .reduce((a, b) => a + b);
+        .split(" ") // Konvertiert den Text in Array
+        .map(Number) // Konvertiert das Array zu einem Int Array
+        .reduce((a, b) => a + b); // Summiert die Int-Werte im Array
       const sec = document.querySelector("#list section");
       sec.innerHTML = sec.textContent
         .split(" ")
@@ -35,8 +35,16 @@
       const p = document.querySelector("p");
       p.innerHTML = p.textContent
         .split("")
-        .map(Number)
+        .map(Number) // alternativ nach reduce: => parseInt(a) + parseInt(b)
         .reduce((a, b) => a + b);
+
+      // Musterlösung von Ehlers:
+      document.querySelectorAll("list > *").forEach((i) => {
+        const sum = i.innerHTML
+          .split(" ")
+          .reduce((a, b) => parseInt(a) + parseInt(b));
+        i.innerHTML = sum;
+      });
     </script>
   </body>
 </html>
