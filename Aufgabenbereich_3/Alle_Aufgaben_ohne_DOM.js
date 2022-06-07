@@ -5,7 +5,7 @@ function isDivider(a, b) {
 
 console.log(isDivider(8, 3)); // -> false
 
-// Aufgabe 3.2 -- Alternativ auch ohne Array in der Funktion
+// Aufgabe 3.2 
 function sumofDividers(a) {
   let sum = 0;
   for (var i = 1; i < a; i++) {
