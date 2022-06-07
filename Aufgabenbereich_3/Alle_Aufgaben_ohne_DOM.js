@@ -1,49 +1,44 @@
 // Aufgabe 3.1
 function isDivider(a, b) {
-  if (a % b == 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return !(a % b);
 }
+
+console.log(isDivider(8, 3)); // -> false
 
 // Aufgabe 3.2 -- Alternativ auch ohne Array in der Funktion
 function sumofDividers(a) {
-  let result = 0; 
-  let newArr = [0]; 
-  for (let i = 1; i < a; i++) {
-    newArr.push(i);
-    if (a % newArr[i] == 0) {
-      result = result + newArr[i];
-    } else {
-      continue;
+  let sum = 0;
+  for (var i = 1; i < a; i++) {
+    if (!(a % i)) {
+      sum += i;
     }
   }
-  return result;
+  return sum;
 }
+
+console.log(sumofDividers(8)); // -> 7
 
 // Aufgabe 3.3
 function isPerfectNumber(a) {
-  if (sumofDividers(a) == a) {
-    return true;
-  } else {
-    return false;
-  }
+  return sumofDividers(a) == a;
 }
+
+console.log(isPerfectNumber(6)); // true
 
 // Aufgabe 3.4
 function findPerfectNumbers(n) {
-  let arr12 = [];
-  let result = 0;
+  let arr_perfNum = [];
   for (let i = 1; i < n; i++) {
     if (isPerfectNumber(i)) {
-      arr12.push(i);
+      arr_perfNum.push(i);
     } else {
       continue;
     }
   }
-  return arr12;
+  return arr_perfNum;
 }
+
+console.log(findPerfectNumbers(70));
 
 // Aufgabe 3.7
 const objects = [
@@ -53,18 +48,11 @@ const objects = [
   { city: "Heide", state: "SH", inhabitants: 21000 },
 ];
 
-/*
 function inhabitantsOfState(objects, state) {
-  const stateFilter = objects.filter((o) => o.state == state);
-  return stateFilter;
-}*/
-
-
-function inhabitantsOfState(objects,state) {
-  return objects.filter(o => o.state==state) 
-    .map(o=> o.inhabitants)
-    .reduce((a,b) => (a+b))
-  
+  return objects
+    .filter((o) => o.state == state) // filtert
+    .map((o) => o.inhabitants) // konvertiert in ein Array
+    .reduce((a, b) => a + b); // addiert die Werte im Array
 }
 
 console.log(inhabitantsOfState(objects, "SH"));

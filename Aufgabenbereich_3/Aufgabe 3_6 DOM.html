@@ -15,34 +15,12 @@
     </div>
 
     <script>
-      // bessere Lösung wäre: über eine foor Loop durch jedes ChildElement gehen.
-      const parent = document.getElementById(list);
-      let b = document.querySelector("#list b");
-      b.innerHTML = b.textContent
-        .split(" ") // Konvertiert den Text in Array
-        .map(Number) // Konvertiert das Array zu einem Int Array
-        .reduce((a, b) => a + b); // Summiert die Int-Werte im Array
-      const sec = document.querySelector("#list section");
-      sec.innerHTML = sec.textContent
-        .split(" ")
-        .map(Number)
-        .reduce((a, b) => a + b);
-      const di = document.querySelector("#list div");
-      di.innerHTML = di.textContent
-        .split("")
-        .map(Number)
-        .reduce((a, b) => a + b);
-      const p = document.querySelector("p");
-      p.innerHTML = p.textContent
-        .split("")
-        .map(Number) // alternativ nach reduce: => parseInt(a) + parseInt(b)
-        .reduce((a, b) => a + b);
-
       // Musterlösung von Ehlers:
-      document.querySelectorAll("list > *").forEach((i) => {
+      document.querySelectorAll("#list > *").forEach((i) => {
         const sum = i.innerHTML
           .split(" ")
-          .reduce((a, b) => parseInt(a) + parseInt(b));
+          .map(Number) // alternativ das weglassen und nach dem reduce "=> parseInt(a)+parseInt(b))"
+          .reduce((a, b) => a + b);
         i.innerHTML = sum;
       });
     </script>
